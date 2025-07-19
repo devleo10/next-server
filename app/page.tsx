@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 async function getUserData(){
-  await new Promise((r)=>setTimeout(r,3000))
-  const response = await axios.get('https://week-13-offline.kirattechnologies.workers.dev/api/v1/user/details')
+  const response = await axios.get('http://localhost:3000/api/user')
    return response.data;
 }
 
@@ -16,7 +15,7 @@ export default async function Home(){
         <div>
         Name: {userDetails?.name}
         </div>
-        {userDetails?.email}
+        Email: {userDetails?.email}
       </div>
       </div>
     </div>
