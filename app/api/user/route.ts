@@ -1,27 +1,12 @@
-export function GET(){
+import { NextRequest,NextResponse } from "next/server";
 
-    return Response.json({
-        email:"mehbubwork@gmail.com",
-        name:"Mehbub"
-    })
-}
+export async function POST(req: NextRequest){
 
-export function PUT(){
+    const body = await req.json();
 
-    return Response.json({
-        email:"mehbubwork@gmail.com",
-        name:"Mehbub"
-    })
-}
+    return Response.json({username: body.username, password:body.password})
+ }
 
-
-export function POST(){
-
-    return Response.json({
-        email:"mehbubwork@gmail.com",
-        name:"Mehbub"
-    })
-}
 
 
 
